@@ -21,14 +21,14 @@ url = ''
     
     
    this.dataApi.getVideo(this.linkId).subscribe((success)=>{
-    console.log(success)
+   
   })
  
     this.dataApi.getSubtitle(this.linkId).subscribe((success)=>{
-      console.log(success)
+      
     })
     this.url = `https://www.youtube.com/embed/${this.linkId}?autoplay=1&fs=0&showinfo=0&rel=0&start=0&end=0`
-    console.log(this.modalOpen)
+   
    
   }
  addInput(){
