@@ -1,0 +1,25 @@
+<div *ngIf="modalOpen" class="modal w-screen">
+    <div class="modal-inline w-auto h-[90%] rounded">
+    <div class="modal-header flex justify-between border-b-2 p-5">
+       <h1 class="font-semibold text-lg">Subtitle</h1>
+       <div class="buttons flex flex-row gap-6">
+           <button type="button" class="exit" (click)="toggle(!this.modalOpen)"><span></span></button>
+       </div>
+    </div>
+    <div class="modal-body flex lg:flex-row md:flex-col sm:flex-col p-5 gap-[2rem]">
+     <div class="basis-1/2 order-input lg:order-first md:order-2 sm:order-2">
+      <div class="modal-body-head flex justify-between">
+          <button type="button" class="flex flex-row font-medium" (click)="addInput()"><img src="../../../assets/add_black_24dp.svg" />Add New Box</button>
+          <span class="font-medium">Edit As Text</span>
+      </div>
+      <div class="modal-body-box mt-5 flex flex-col lg:max-h-[70vh] md:max-h-[35vh] overflow-y-auto" #input>
+   
+       
+      </div>   
+     </div>
+     <div class="basis-1/2 order-video lg:order-2 md:order-first sm:order-first">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="600px" type="text/html" [src]="url | safe"></iframe>
+     </div>
+    </div>
+    </div>
+</div>
